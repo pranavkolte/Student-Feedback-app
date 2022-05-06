@@ -1,5 +1,6 @@
 package com.professor.feedbackform;
 
+import android.content.Intent;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.view.View;
@@ -130,6 +131,7 @@ public class UploadFeedback extends AppCompatActivity {
 
                         if (id > 0) {
                             Toast.makeText(UploadFeedback.this, "Comment uploaded successfully", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(UploadFeedback.this , FeedbackHome.class));
                         }
                     } else {
                         Toast.makeText(UploadFeedback.this, "Please verify all the details", Toast.LENGTH_LONG).show();
